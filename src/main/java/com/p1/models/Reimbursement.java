@@ -1,6 +1,5 @@
 package com.p1.models;
 
-
 public class Reimbursement {
     private int reimbId;
     private double amount;
@@ -12,7 +11,8 @@ public class Reimbursement {
     public Reimbursement() {
     }
 
-    public Reimbursement(int reimbId, double amount, String reimbSubmitted, String reimbResolved, String description, boolean reimbReceipt, String reimbAuthor, String reimbResolver, String reimbStatus, String reimbType) {
+    public Reimbursement(int reimbId, double amount, String reimbSubmitted, String reimbResolved, String description,
+            boolean reimbReceipt, String reimbAuthor, String reimbResolver, String reimbStatus, String reimbType) {
         this.reimbId = reimbId;
         this.amount = amount;
         this.reimbSubmitted = reimbSubmitted;
@@ -105,21 +105,20 @@ public class Reimbursement {
         this.reimbType = reimbType;
     }
 
-    
     @Override
     public String toString() {
         return "{" +
-            " reimbId='" + getReimbId() + "'" +
-            ", amount='" + getAmount() + "'" +
-            ", reimbSubmitted='" + getReimbSubmitted() + "'" +
-            ", reimbSolved='" + getReimbResolved() + "'" +
-            ", description='" + getDescription() + "'" +
-            ", reimbReceipt='" + getReimbReceipt() + "'" +
-            ", reimbAuthor='" + getReimbAuthor() + "'" +
-            ", reimbResolver='" + getReimbResolver() + "'" +
-            ", reimbStatus='" + getReimbStatus() + "'" +
-            ", reimbType='" + getReimbType() + "'" +
-            "}";
+                " reimbId='" + getReimbId() + "'" +
+                ", amount='" + getAmount() + "'" +
+                ", reimbSubmitted='" + getReimbSubmitted() + "'" +
+                ", reimbSolved='" + getReimbResolved() + "'" +
+                ", description='" + getDescription() + "'" +
+                ", reimbReceipt='" + getReimbReceipt() + "'" +
+                ", reimbAuthor='" + getReimbAuthor() + "'" +
+                ", reimbResolver='" + getReimbResolver() + "'" +
+                ", reimbStatus='" + getReimbStatus() + "'" +
+                ", reimbType='" + getReimbType() + "'" +
+                "}";
     }
-    
+
 }

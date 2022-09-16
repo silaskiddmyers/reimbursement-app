@@ -14,7 +14,7 @@ public class ReimbursementController {
 
     public void retrieveReimbursementsBy(Context ctx) {
         User user = ctx.sessionAttribute("user");
-        if(user == null){
+        if (user == null) {
             ctx.json(new JsonResponse(false, "cant retrieve items because no session found", null));
             return;
         }
@@ -23,7 +23,7 @@ public class ReimbursementController {
         List<Reimbursement> items = rs.retrieveReimbursementsBy(retrieveByType, retrieveParam);
 
         ctx.json(new JsonResponse(true, "retrieving all reimbursements for " + user.getFirstName(), items));
-        
+
     }
 
     public void createNewReimbursementReport(Context ctx) {
@@ -35,7 +35,7 @@ public class ReimbursementController {
 
     public void resolveReimbursement(Context ctx) {
         User user = ctx.sessionAttribute("user");
-        if(user == null){
+        if (user == null) {
             ctx.json(new JsonResponse(false, "cant resolve because no session found", null));
             return;
         }

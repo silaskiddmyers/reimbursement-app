@@ -3,16 +3,15 @@ let user;
 let reimbs;
 
 window.addEventListener("load", async () => {
-    
+
     let response = await fetch("/api/session");
-    
+
     let responseBody = await response.json();
-    
-    if(!responseBody.successful){
+
+    if (!responseBody.successful) {
         window.location = "../";
     }
-    if(responseBody.data.userRole == "Manager")
-    {
+    if (responseBody.data.userRole == "Manager") {
         await fetch("/api/session", { method: "DELETE" });
         window.location = "../";
     }
@@ -24,9 +23,9 @@ window.addEventListener("load", async () => {
 });
 
 
-async function getAllReimbs(retrieveParam){
+async function getAllReimbs(retrieveParam) {
     let retrieveType = 2;
-    let response = await fetch(`/api/reimbursement/retrieveType=${retrieveType}&retrieveParam=${retrieveParam}`, {method: "GET"});
+    let response = await fetch(`/api/reimbursement/retrieveType=${retrieveType}&retrieveParam=${retrieveParam}`, { method: "GET" });
 
     let responseBody = await response.json();
 
@@ -41,7 +40,7 @@ logoutBtn.addEventListener("click", async () => {
 });
 
 
-function displayReimbs(reimbs){
+function displayReimbs(reimbs) {
     console.log(reimbs);
     reimbs.forEach(reimb => {
 
@@ -54,31 +53,31 @@ function displayReimbs(reimbs){
 
         let reimbNameElem = document.createElement("div");
         reimbNameElem.className = "reimbursement-name text-light";
-        reimbNameElem.innerText = `${reimb.reimbSubmitted.substring(0,19)} $${reimb.amount} \t\t ${reimb.reimbType}: ${reimb.description}`;  
-        
+        reimbNameElem.innerText = `${reimb.reimbSubmitted.substring(0, 19)} $${reimb.amount} \t\t ${reimb.reimbType}: ${reimb.description}`;
+
         let reimbStatusElem = document.createElement("div");
-        if(reimb.reimbStatus == 'Pending') {
+        if (reimb.reimbStatus == 'Pending') {
             reimbStatusElem.className = "reimbursement-status bg-warning";
-        } else if(reimb.reimbStatus == 'Approved') {
+        } else if (reimb.reimbStatus == 'Approved') {
             reimbStatusElem.className = "reimbursement-status bg-success text-light";
         } else {
             reimbStatusElem.className = "reimbursement-status bg-danger text-light";
         }
 
-        reimbStatusElem.innerText = `${reimb.reimbStatus !=  'Pending' ? `${reimb.reimbResolved.substring(0, 19)}` : ""}`;
-        
+        reimbStatusElem.innerText = `${reimb.reimbStatus != 'Pending' ? `${reimb.reimbResolved.substring(0, 19)}` : ""}`;
+
 
         reimbElem.appendChild(reimbNameContElem);
         reimbElem.appendChild(reimbStatusElem);
         reimbNameContElem.appendChild(reimbNameElem);
-        
+
         reimbsContainer.appendChild(reimbElem);
     });
 }
 
 
 let addReimbFormElem = document.getElementById("add-reimbursement-form");
-    addReimbFormElem.addEventListener("submit", async (event) => {
+addReimbFormElem.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     let description = document.getElementById("description");
@@ -92,8 +91,8 @@ let addReimbFormElem = document.getElementById("add-reimbursement-form");
             "reimbType": reimbType.value
         })
     })
-    
-    let session = await fetch("/api/session", {method: "GET"});
+
+    let session = await fetch("/api/session", { method: "GET" });
     let sessionBody = await session.json();
     reimbsContainer.innerHTML = "";
     console.log(sessionBody);

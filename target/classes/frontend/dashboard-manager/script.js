@@ -11,8 +11,7 @@ window.addEventListener("load", async () => {
     if (!responseBody.successful) {
         window.location = "../";
     }
-    if(responseBody.data.userRole == "Employee")
-    {
+    if (responseBody.data.userRole == "Employee") {
         await fetch("/api/session", { method: "DELETE" });
         window.location = "../";
     }
@@ -111,7 +110,7 @@ function displayReimbs(reimbs) {
 
         reimbsContainer.appendChild(reimbElem);
 
-        if(reimb.reimbStatus != "Pending") {
+        if (reimb.reimbStatus != "Pending") {
             reimbElem.removeChild(resolveContainer);
         }
     });

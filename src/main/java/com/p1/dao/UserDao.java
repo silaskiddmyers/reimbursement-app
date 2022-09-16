@@ -9,5 +9,4 @@ public interface UserDao {
 
     List<ReimbType> getReimbTypes();
 
-
 }

@@ -27,20 +27,20 @@ public class UserService {
     public boolean validateCredentials(User credentials) {
 
         User userFromStore = userDao.getUserByUsername(credentials.getUsername());
-        if(userFromStore == null){
+        if (userFromStore == null) {
             return false;
         }
-        
+
         String sha256hex = Hashing.sha256().hashString(credentials.getPassword(), StandardCharsets.UTF_8).toString();
         System.out.println(credentials.getPassword());
-        if(sha256hex.equals(userFromStore.getPassword())){
+        if (sha256hex.equals(userFromStore.getPassword())) {
             return true;
         }
 
         return false;
     }
 
-    public User getUserGivenUsername(String username){
+    public User getUserGivenUsername(String username) {
         return userDao.getUserByUsername(username);
     }
 

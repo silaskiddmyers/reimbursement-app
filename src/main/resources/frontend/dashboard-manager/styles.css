@@ -2,14 +2,14 @@
     background-color: rgb(43, 43, 43);
 }
 
-#reimbursement-container{
+#reimbursement-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
 
-.reimbursement{
+.reimbursement {
 
     width: 45%;
 
@@ -23,8 +23,8 @@
     border-radius: 6px;
 }
 
-.reimbursement-name{
-    font-size: 16px; 
+.reimbursement-name {
+    font-size: 16px;
     padding: 10px;
     border-radius: 6px;
 }
@@ -41,25 +41,25 @@
 
 #select-by-button {
     width: 80px;
-    margin:5px;
-    position:relative;
+    margin: 5px;
+    position: relative;
     left: 38%;
-    
+
 }
 
-#display-by-container{
+#display-by-container {
     width: 400px;
     height: 150px;
     margin: 10px;
     background-color: rgb(33, 37, 41);
 
-    position:fixed;
+    position: fixed;
     top: 55px;
     right: 10%;
 
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     padding: 10px;
     border-radius: 6px;
 
@@ -70,27 +70,27 @@
     margin-bottom: auto;
 }
 
-#add-reimbursement-form input{
+#add-reimbursement-form input {
     margin-right: 10px;
 }
 
 
-#name-to-create{
+#name-to-create {
     width: 300px;
 }
 
-#qty-to-create{
+#qty-to-create {
     width: 60px;
 }
 
 
-@media screen and (max-width: 1000px){
-    .reimbursement{
+@media screen and (max-width: 1000px) {
+    .reimbursement {
         width: 100%;
     }
 
     #display-by-container {
         margin-inline: auto;
-        position:static;
+        position: static;
     }
 }

@@ -6,10 +6,9 @@ import com.p1.dao.ReimbursementDao;
 import com.p1.dao.ReimbursementDaoJdbc;
 import com.p1.models.*;
 
-
 public class ReimbursementService {
     ReimbursementDao jdbc = new ReimbursementDaoJdbc();
-    
+
     public List<Reimbursement> retrieveReimbursementsBy(int getType, String getParam) {
         return jdbc.getReimbursementsBy(getType, getParam);
     }

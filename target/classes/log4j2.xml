@@ -9,7 +9,7 @@
     </Appenders>
     <Loggers>
         <Root level="DEBUG">
-            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToFile" />
         </Root>
     </Loggers>
 </Configuration>

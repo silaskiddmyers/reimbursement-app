@@ -28,13 +28,12 @@ public class ReimbType {
         this.type = type;
     }
 
-
     @Override
     public String toString() {
         return "{" +
-            " id='" + getId() + "'" +
-            ", type='" + getType() + "'" +
-            "}";
+                " id='" + getId() + "'" +
+                ", type='" + getType() + "'" +
+                "}";
     }
-    
+
 }

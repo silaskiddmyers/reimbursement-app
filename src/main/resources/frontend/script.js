@@ -13,7 +13,7 @@ loginFormElem.addEventListener("submit", (event) => {
 
 });
 
-async function sendLoginRequest(username, password){
+async function sendLoginRequest(username, password) {
 
     let response = await fetch("/api/session", {
         method: "POST",
@@ -26,13 +26,13 @@ async function sendLoginRequest(username, password){
 
     let responseBody = await response.json();
 
-    if(responseBody.successful){
+    if (responseBody.successful) {
         //do successful stuff
-        if(responseBody.data.userRole == "Employee")
+        if (responseBody.data.userRole == "Employee")
             window.location = "./dashboard-employee";
         else
             window.location = "./dashboard-manager";
-    }else{
+    } else {
         //do unsuccessful stuff
         let messageElem = document.getElementById("message");
 

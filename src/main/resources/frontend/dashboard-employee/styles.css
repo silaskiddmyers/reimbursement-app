@@ -2,14 +2,14 @@
     background-color: rgb(43, 43, 43);
 }
 
-#reimbursement-container{
+#reimbursement-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
 
-.reimbursement{
+.reimbursement {
 
     width: 45%;
 
@@ -23,8 +23,8 @@
     border-radius: 6px;
 }
 
-.reimbursement-name{
-    font-size: 16px; 
+.reimbursement-name {
+    font-size: 16px;
     padding: 10px;
     border-radius: 6px;
 }
@@ -41,45 +41,45 @@
 
 
 
-#add-reimbursement-form{
+#add-reimbursement-form {
     width: 400px;
     height: 300px;
     margin: 10px;
     background-color: rgb(33, 37, 41);
 
-    position:fixed;
+    position: fixed;
     top: 55px;
     right: 10%;
 
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     padding: 10px;
     border-radius: 6px;
 
 }
 
-#add-reimbursement-form input{
+#add-reimbursement-form input {
     margin-right: 10px;
 }
 
 
-#name-to-create{
+#name-to-create {
     width: 300px;
 }
 
-#qty-to-create{
+#qty-to-create {
     width: 60px;
 }
 
 
-@media screen and (max-width: 1000px){
-    .reimbursement{
+@media screen and (max-width: 1000px) {
+    .reimbursement {
         width: 90%;
     }
 
     #add-reimbursement-form {
-        position:static;
+        position: static;
         margin-inline: auto;
     }
 }

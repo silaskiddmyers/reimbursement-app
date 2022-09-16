@@ -5,18 +5,14 @@ public class JsonResponse {
     private String message;
     private Object data;
 
-
     public JsonResponse() {
     }
-
 
     public JsonResponse(boolean successful, String message, Object data) {
         this.successful = successful;
         this.message = message;
         this.data = data;
     }
-
-
 
     public boolean isSuccessful() {
         return this.successful;
@@ -46,13 +42,12 @@ public class JsonResponse {
         this.data = data;
     }
 
-
     @Override
     public String toString() {
         return "{" +
-            " successful='" + isSuccessful() + "'" +
-            ", message='" + getMessage() + "'" +
-            ", data='" + getData() + "'" +
-            "}";
+                " successful='" + isSuccessful() + "'" +
+                ", message='" + getMessage() + "'" +
+                ", data='" + getData() + "'" +
+                "}";
     }
 }

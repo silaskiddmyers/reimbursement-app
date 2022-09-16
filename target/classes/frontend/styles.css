@@ -2,14 +2,14 @@
     background-color: rgb(43, 43, 43);
 }
 
-#login-form-container{
+#login-form-container {
     display: flex;
     justify-content: space-evenly;
 
     margin-top: 50px;
 }
 
-#login-form{
+#login-form {
     width: 400px;
     background-color: rgb(215, 220, 221);
     border-radius: 6px;
@@ -19,7 +19,7 @@
     padding: 20px;
 }
 
-#login-form input{
+#login-form input {
     width: 100%;
     margin-bottom: 5px;
 
@@ -29,14 +29,14 @@
     border: none;
 }
 
-#message{
+#message {
     color: red;
 
     display: none;
 }
 
-@media screen and (max-width: 600px){
-    #login-form{
+@media screen and (max-width: 600px) {
+    #login-form {
         width: 90%;
     }
 }

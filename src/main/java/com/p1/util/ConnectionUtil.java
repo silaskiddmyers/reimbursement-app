@@ -14,7 +14,7 @@ public class ConnectionUtil {
     private static final String username = System.getenv("DB_UN");
     private static final String password = System.getenv("DB_PW");
 
-    public static Connection getConnection(){
+    public static Connection getConnection() {
 
         Connection conn = null;
 

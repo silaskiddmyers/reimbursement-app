@@ -9,10 +9,8 @@ import java.util.List;
 import com.p1.models.JsonResponse;
 import com.p1.models.ReimbType;
 
-
 public class UserController {
     UserService service = new UserService();
-
 
     public void getAllReimbTypes(Context ctx) {
         List<ReimbType> items = service.getReimbTypes();
@@ -20,5 +18,4 @@ public class UserController {
         ctx.json(new JsonResponse(true, "retrieving all reimbursement types ", items));
     }
 
-    
 }
